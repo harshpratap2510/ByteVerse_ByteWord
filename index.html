@@ -12,32 +12,28 @@
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-</head>
+  
+  </head>
 
 <body>
 
   <div class="menu-bar">
     <div class="logo">
-      <img class="LogoPic" src="https://t4.ftcdn.net/jpg/04/67/83/07/360_F_467830726_3BmOinvlYe8ZpcrrJcajRj5OtuK7PqZS.jpg" width="100px" height="60px" alt="IGSLogo">
+      <a href="#"><img class="LogoPic" src="https://t4.ftcdn.net/jpg/04/67/83/07/360_F_467830726_3BmOinvlYe8ZpcrrJcajRj5OtuK7PqZS.jpg" width="100px" height="60px" alt="IGSLogo"></a>
       <p>
           Explore
-          <span class="plus-color">Plus</span>
-          <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png" alt="Plus Icon" width="10px" height="10px">
+          <a href="#"><span class="plus-color">Super</span></a>
+          
       </p>
   </div>
     <ul class="menubar-list">
       <li><a href="#">Home</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="signin.html">Log In</a></li>
+      <li><a href="#">FAQ</a></li>
       <!-- <li><a href="#">About</a></li> -->
-      <li><a href="#">Account<i class="fas fa-caret-down"></i></a>
-        <div class="dropdown-menu">
-          <ul>
-            <li><a href="signup.html">Sign Up</a></li>
-            <li><a href="signin.html">Log In</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
-        </div>
-      </li>
-      <li><a href="#">Contact us</a></li>
+
+      <li><a href="mailto:harshguptaclj@gmail.com">Contact us</a></li>
     </ul>
   </div>
 
@@ -45,29 +41,32 @@
   <div class="big">
     <div class="container">
       <div class="training-item">
-        <h1>Welcome to IGC
-        </h1>
-        <h2>one stop solution to all grocery needs</h2>
+        <h1 id="heading1"><b>Welcome to IGS</b></h1>
+        <h1 id="heading2"><b>Integrated Grocery Shop</b></h1>
+        <img class="LogoPic1" src="https://t4.ftcdn.net/jpg/04/67/83/07/360_F_467830726_3BmOinvlYe8ZpcrrJcajRj5OtuK7PqZS.jpg" width="100px" height="60px" alt="IGSLogo">
       </div>
       <div class="training-item">
         <!-- <img class="startimg" src="3959742f-10e3-46dc-b047-271c58e36660.png" alt=""> -->
-        <img class="startimg1" src="images/9247d22a-bdcb-4efa-80d2-3e109f42ce0f.png" alt="">
+        <img class="startimg1" src="images\1681645346887 1.png" alt="">
       </div>
+      <h3 id="heading1">An Integrated website for all the grocery shops in Patna</h3>
     </div>
   </div>
 
   <div class="contain">
-     <h1> Shop By Category</h1>
+     <h1 id="shopCategory"> Please Select One Mode for Shopping...</h1>
    <div class="shop">
     <a class="clickablediv" href="shopbyname.html">
        <div class="card-container">
         <img class="img" src="images/store.png" alt="">
-        <p>Shop By Name</p>
+        <p>MODE 1</p>
+        <p>Shop By Shop Name</p>
       </div></a>
       <a href="shopbyitem.html">
         <div class="card-container">
         <img class="img" src="images/cart.png" alt="">
-        <p> Shop By Items </p>
+        <p>MODE 2</p>
+        <p> Shop By Item Name </p>
       </div>
     </a>
     </div>
@@ -75,19 +74,19 @@
   </div>
 
   <div class="contain1">
-    <h1>Features</h1>
+    <h1>Our Facilities</h1>
     <div class="shop1">
       <div class="card-container1">
         <img class="img" src="images/WhatsApp Image 2023-04-14 at 10.59 1.png" alt="">
-        <p>Instant Home Delivery</p>
+        <p><b>Instant Home Delivery</b></p>
       </div>
       <div class="card-container1">
         <img class="img" src="images/24hour.png" alt="">
-        <p>24/7 Customer Support </p>
+        <p><b>24/7 Customer Support </b></p>
       </div>
       <div class="card-container1">
         <img class="img" src="images/cod.jpeg" alt="">
-        <p>Pay On Delivery Available</p>
+        <p><b>Pay On Delivery Available</b></p>
       </div>
   </div>
 
@@ -103,30 +102,38 @@
 
     <div class="faq">
       <button class="accordion">
-        What is JavaScript ?
+        Do you have a warehouse?
         <i class="fa-solid fa-chevron-down"></i>
       </button>
       <div class="pannel">
         <p>
-          JavaScript is a scripting language that enables you to create dynamically updating content, control
-          multimedia, animate
-          images, and pretty much everything else. (Okay, not everything, but it is amazing
-          what you can achieve with a few lines of JavaScript code.)
+          No we don't have warehouses, we just provide reliable and quick delivery services
+          by picking the grocery items from your desired shop and delivering to your doorstep.
         </p>
       </div>
     </div>
 
     <div class="faq">
       <button class="accordion">
-        what is HTML ?
+        Is this service available all over India ?
         <i class="fa-solid fa-chevron-down"></i>
       </button>
       <div class="pannel">
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
-          saepe molestiae distinctio asperiores cupiditate consequuntur dolor
-          ullam, iure eligendi harum eaque hic corporis debitis porro
-          consectetur voluptate rem officiis architecto.
+          Currently we are providing services only in Patna but we will soon be avilable all over the India.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="accordion">
+        What are the benefits of super subscription ?
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="pannel">
+        <p>
+          By taking super subscription you can avail free, fast,secure and instant delivery.
+          You will also have a early access to deals and offers.
         </p>
       </div>
     </div>
@@ -137,45 +144,45 @@
       <div class="row">
         <div class="footer-col">
 
-          <h4>company</h4>
+          <h4>About</h4>
           <ul>
-            <li><a href="#">about us</a></li>
-            <li><a href="#">our service</a></li>
-            <li><a href="#">privacy policy</a></li>
-            <li><a href="#">affiliate program</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
           </ul>
         </div>
         <div class="footer-col">
 
-          <h4>Get help</h4>
+          <h4>Help</h4>
           <ul>
             <li><a href="#">FAQ</a></li>
-            <li><a href="#">shipping</a></li>
-            <li><a href="#">returns</a></li>
-            <li><a href="#">order status</a></li>
-            <li><a href="#">payment option</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Cancellations</a></li>
+            
           </ul>
         </div>
 
         <div class="footer-col">
 
-          <h4>Online Shop</h4>
+          <h4>Consumer Policy</h4>
           <ul>
-            <li><a href="#">watching</a></li>
-            <li><a href="#">bag</a></li>
-            <li><a href="#">shoes</a></li>
-            <li><a href="#">dress</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Security & Privacy</a></li>
+            <li><a href="#">Grievance</a></li>
 
           </ul>
         </div>
         <div class="footer-col">
-
+          
           <h4>Follow us</h4>
           <div class="social-links">
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a></li>
           </div>
         </div>
 
@@ -204,5 +211,7 @@
     }
   </script>
 </body>
+ 
+
 
 </html>
