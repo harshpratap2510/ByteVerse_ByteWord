@@ -215,6 +215,7 @@ color: #4698E4;
         min-width: 298px;
         /* border: 1px solid red; */
         width: auto;
+        border-radius: 20px;
     }
     
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
