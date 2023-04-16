@@ -239,10 +239,10 @@ nav{
   }
   .footer {
     background-color: #4daef9;
-    padding: 70px 0;
+    padding: 20px 0;
   }
   .footer-col {
-    width: 25%;
+    width: 20%;
     padding: 0 15px;
   }
   .footer-col h4 {
@@ -258,7 +258,7 @@ nav{
     position: absolute;
     left: 0;
     bottom: -10px;
-    background-color: #e91e63;
+    background-color: #ffffff;
     height: 2px;
     box-sizing: border-box;
     width: 50px;
