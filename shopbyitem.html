@@ -1,308 +1,319 @@
-<!DOCTYPE html>
-<html lang="en">
+*{
+  padding: 0;
+  margin: 0;
+}
+nav{
+  background-color: rgb(73, 135, 179);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+  /* border: 1px solid red; */
+}
+.plus-color{
+  color: rgb(255, 255, 0);
+}
+.logo p{
+  color: white;
+  position: relative;
+  top: -1px;
+}
+.LogoPic{
+  border-radius: 15%;
+}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up Form</title>
-  <link rel="stylesheet" href="stylebyitem.css ">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="icon" href="data:image/png;base64,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">
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
-
-</head>
-
-<body>
-  <nav>
-    <div class="logo">
-        <a href="index.html"><img class="LogoPic" src="https://t4.ftcdn.net/jpg/04/67/83/07/360_F_467830726_3BmOinvlYe8ZpcrrJcajRj5OtuK7PqZS.jpg" width="100px" height="60px" alt="IGSLogo"></a>
-        <p>
-            Explore
-            <span class="plus-color">Plus</span>
-            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png" alt="Plus Icon" width="10px" height="10px">
-        </p>
-    </div>
-
-    <div class="search">
-        <input type="text" placeholder="Search Any Grocery Items">
-        <i class="fa-solid fa-magnifying-glass"></i> 
-
-        <div class="RecentSearch">
-            <div class="RecentSearch_List">
-                <i class="fa-solid fa-clock-rotate-left"></i>
-                <p>toothpaste</p>
-            </div>
-            <p class="discoverMore">Discover More</p>
-
-            <div class="RecentSearch_List_Discover">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <p>Maggi</p>
-            </div>
-            <div class="RecentSearch_List_Discover">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <p>Atta</p>
-            </div>
-            <div class="RecentSearch_List_Discover">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <p>Soap</p>
-            </div>
-            <div class="RecentSearch_List_Discover">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <p>Soyabean Oil</p>
-            </div>
-            <div class="RecentSearch_List_Discover">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <p>Dalia</p>
-            </div>
-            <div class="RecentSearch_List_Discover">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <p>Almonds</p>
-            </div>
-            <div class="RecentSearch_List_Discover">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <p>Cashews</p>
-            </div>
-            
-        </div>
-    </div>
-
-    <button class="loginBtn">
-        Login
-        <div class="HoverLogin">
-            <div class="triangle-up"></div>
-            <div class="NewUser">
-                <p>New Customer?</p>
-                <a href="#"> Sign up</a>
-            </div>
-            <div class="loginMenu">
-                <div class="menuList">
-                    <i class="fa-solid fa-user"></i>
-                    <p>My Profile</p>
-                </div>
-                <div class="menuList">
-                    <i class="fa-solid fa-circle-plus"></i>
-                    <p>IGC Plus Zone</p>
-                </div>
-                <div class="menuList">
-                    <i class="fa-solid fa-list"></i>
-                    <p>Orders</p>
-                </div>
-                <div class="menuList">
-                    <i class="fa-solid fa-heart"></i>
-                    <p>Wishlist</p>
-                </div>
-                <div class="menuList">
-                    <i class="fa-solid fa-forward-step"></i>
-                    <p>Rewards</p>
-                </div>
-                <div class="menuList">
-                    <i class="fa-solid fa-gift"></i>
-                    <p>Gift</p>
-                </div>
-            </div>
-        </div>
-    </button>
-
-    <a href="#" class="Navlink">Become a Seller</a>
-    <a href="#" class="Navlink">
-        More
-        <i class="fa-solid fa-angle-down" class="angleDownIcon"></i>
-    </a>
-    <a href="addtocart.html" class="Navlink">
-        <i class="fa-solid fa-cart-plus"></i>
-        Cart
-    </a>
-
-</nav>
-
-<img class="posterimg" src="images/promo-sale-flyer-groceries-grocery-260nw-1778803349.png" alt="adv" width="100%" height="350px">
-
-
-  <main class="item-container">
-
-    <div class="items">
-      <img
-        src="https://rukminim1.flixcart.com/image/416/416/xif0q/soya-chunk/2/p/1/-original-imagznq9ajjb34wm.jpeg?q=70"
-        alt="" class="img">
-      <div class="price">
-        <h2 class="item-heading"><i class="fas fa-rupee-sign fa-sm"></i>37</h2>
-        <p><i class="fas fa-rupee-sign fa-sm"></i>60</p>
-        <p>38% off</p>
-      </div>
-      <p class="item-text">Saffola Soya Chunks (200 g)</p>
-      <button>Add to Cart</button>
-    </div>
-
-    <div class="items">
-      <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/pulses/k/j/l/-original-imagh62xvpjfnhvj.jpeg?q=70" alt="" class="img">
-      <div class="price">
-        <h2 class="item-heading"><i class="fas fa-rupee-sign fa-sm"></i>37</h2>
-        <p><i class="fas fa-rupee-sign fa-sm"></i>60</p>
-        <p>38% off</p>
-      </div>
-      <p class="item-text">Tata Sampann Toor Dal with Chana Dal (2 kg)</p>
-      <button>Add to Cart</button>
-    </div>
-
-    <div class="items">
-      <img
-        src="https://rukminim1.flixcart.com/image/416/416/kfpq5jk0/pulses/b/z/s/1-rajma-red-rajma-unbranded-original-imafw47h3d8mgrpp.jpeg?q=70"
-        alt="" class="img">
-      <div class="price">
-        <h2 class="item-heading"><i class="fas fa-rupee-sign fa-sm"></i>206</h2>
-        <p><i class="fas fa-rupee-sign fa-sm"></i>220</p>
-        <p>6% off</p>
-      </div>
-      <p class="item-text">Red Rajma (Whole)  (1 kg)</p>
-      <button>Add to Cart</button>
-    </div>
-
-    <div class="items">
-      <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/salt/j/o/p/-original-imagn32huvzhxqmg.jpeg?q=70" alt="" class="img">
-      <div class="price">
-        <h2 class="item-heading"><i class="fas fa-rupee-sign fa-sm"></i>25</h2>
-        <p><i class="fas fa-rupee-sign fa-sm"></i>28</p>
-        <p>10% off</p>
-      </div>
-      <p class="item-text">Masoor Chhanti (Whole)  (1 kg)</p>
-      <button>Add to Cart</button>
-    </div>
-
-    <div class="items">
-      <img
-        src="https://rukminim1.flixcart.com/image/416/416/xif0q/edible-oil/f/t/d/-original-imagmwa2xtexyvhh.jpeg?q=70"
-        alt="" class="img">
-      <div class="price">
-        <h2 class="item-heading"><i class="fas fa-rupee-sign fa-sm"></i>112</h2>
-        <p><i class="fas fa-rupee-sign fa-sm"></i>180</p>
-        <p>37% off</p>
-      </div>
-      <p class="item-text">Mahakosh Refined SoyaBean Oil (899gm)</p>
-      <button>Add to Cart</button>
-    </div>
-
-    <div class="items">
-      <img src="https://rukminim1.flixcart.com/image/416/416/kqzj7gw0/rice/k/z/b/white-rozana-super-na-basmati-rice-bag-daawat-original-imag4vkmfhkczngj.jpeg?q=70" alt="" class="img">
-      <div class="price">
-        <h2 class="item-heading"><i class="fas fa-rupee-sign fa-sm"></i>358</h2>
-        <p><i class="fas fa-rupee-sign fa-sm"></i>486</p>
-        <p>26% off</p>
-      </div>
-      <p class="item-text">Daawat Rozana ()</p>
-      <button>Add to Cart</button>
-    </div>
-
-    <div class="items">
-      <img
-        src="https://rukminim1.flixcart.com/image/416/416/xif0q/soya-chunk/2/p/1/-original-imagznq9ajjb34wm.jpeg?q=70"
-        alt="" class="img">
-      <div class="price">
-        <h2 class="item-heading"><i class="fas fa-rupee-sign fa-sm"></i>37</h2>
-        <p><i class="fas fa-rupee-sign fa-sm"></i>60</p>
-        <p>38% off</p>
-      </div>
-      <p class="item-text">Daawat Rozana Super Basmati Rice (Medium Grain)  (5 kg)</p>
-      <button>Add to Cart</button>
-    </div>
-
-    <!-- <div class="items">
-      <img src="https://rukminim1.flixcart.com/image/416/416/klscivk0/rice/d/q/j/white-tibar-basmati-rice-pouch-india-gate-original-imagytzcejesycmg.jpeg?q=70" alt="" class="img">
-      <div class="price">
-        <h2 class="item-heading"><i class="fas fa-rupee-sign fa-sm"></i>127</h2>
-        <p><i class="fas fa-rupee-sign fa-sm"></i>115</p>
-        <p>18% off</p>
-      </div>
-      <p class="item-text">INDIA GATE Tibar Basmati Rice  (1 kg)</p>
-      <button>Add to Cart</button>
-    </div> -->
-
-    <div class="items">
-      <img src="https://rukminim1.flixcart.com/image/416/416/kjhgzgw0/jaggery/c/h/e/450-jaggery-block-pouch-parth-original-imafzfwdjk49jfus.jpeg?q=70" alt="" class="img">
-      <div class="price">
-        <h2 class="item-heading"><i class="fas fa-rupee-sign fa-sm"></i>36</h2>
-        <p><i class="fas fa-rupee-sign fa-sm"></i>48</p>
-        <p>25% off</p>
-      </div>
-      <p class="item-text">Unity Super Basmati Rice(5 kg)</p>
-      <button>Add to Cart</button>
-    </div>
-
-    <div class="items">
-      <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/artificial-sweetener/p/1/c/-original-imagzhhhvvkyuqpt.jpeg?q=70" alt="" class="img">
-      <div class="price">
-        <h2 class="item-heading"><i class="fas fa-rupee-sign fa-sm"></i>234</h2>
-        <p><i class="fas fa-rupee-sign fa-sm"></i>300</p>
-        <p>22% off</p>
-      </div>
-      <p class="item-text">Sugar free NATURA 500 PELLETS Sweetener  (42.5 g)</p>
-      <button>Add to Cart</button>
-    </div>
-    
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="footer-col">
-
-          <h4>company</h4>
-          <ul>
-            <li><a href="#">about us</a></li>
-            <li><a href="#">our service</a></li>
-            <li><a href="#">privacy policy</a></li>
-            <li><a href="#">affiliate program</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-
-          <h4>Get help</h4>
-          <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">shipping</a></li>
-            <li><a href="#">returns</a></li>
-            <li><a href="#">order status</a></li>
-            <li><a href="#">payment option</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-
-          <h4>Online Shop</h4>
-          <ul>
-            <li><a href="#">watching</a></li>
-            <li><a href="#">bag</a></li>
-            <li><a href="#">shoes</a></li>
-            <li><a href="#">dress</a></li>
-
-          </ul>
-        </div>
-        <div class="footer-col">
-
-          <h4>Follow us</h4>
-          <ul class="social-links">
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-          </ul>
-        </div>
-
-
-
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    const searchButton = document.getElementById('search-button');
-    const searchInput = document.getElementById('search-input');
-    searchButton.addEventListener('click', () => {
-      const inputValue = searchInput.value;
-      alert(inputValue);
-    });
-  </script>
-</body>
-
-</html>
+.items button{
+  width: 80%;
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  background-color: #4698E4;
+  padding: 7px 25px;
+  cursor: pointer;
+  color: white;
+}
+ 
+.search{
+  background-color: white;
+  padding: 6px 10px;
+  height: 25px;
+  width: 420px;
+  margin: 0px 15px;
+  display: flex;
+  justify-content: space-between;
+  color: #2874f0;
+  box-shadow: -7px -7px 10px rgba(0,0,0,0.1), 7px 7px 10px rgba(0,0,0,0.1) ;
+  border-radius: 3px;
+}
+.search input{
+  width: 380px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+.loginBtn{
+  padding :7px 30px;
+  font-size: 16px;
+  font-weight: 550;
+  border: none;
+  outline: none;
+  color: #2874f0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.Navlink{
+  margin:0px 20px;
+  font-size: 18px;
+  color:white;
+  text-decoration: none;
+}
+.angleDownIcon{
+  font-size: 5px;
+}
+.RecentSearch{
+  display: none;
+  position: absolute;
+  top: 67px;
+  background-color: white;
+  width: 420px;
+  padding: 6px 10px;
+  margin-left: -10px;
+  height: 350px;
+  box-shadow: -5px 5px 7px rgba(0,0,0,0.2),5px 5px 10px rgba(0,0,0,0.2) ;
+  border-top: 1px solid #ccc;
+  border-radius: 3px ;
+}   
+.RecentSearch_List{
+  font-size: 15px;
+  display: flex;
+  color: rgb(95,94,94);
+}
+.RecentSearch_List p, .RecentSearch_List_Discover p{
+  padding-left: 15px;
+  color: rgb(24, 22,22);
+}
+.discoverMore{
+  margin: 15px 0px;
+  font-size: 15px;
+  color: rgb(95,94,94);
+}
+.RecentSearch_List_Discover{
+  padding: 10px 0px;
+  display: flex;
+}
+.RecentSearch_List_Discover i{
+  color: rgb(95,94,94);
+  font-size: 16px;
+}
+.search:focus-within .RecentSearch{
+  display: block;
+}
+.HoverLogin{
+  position: absolute;
+  top: 80px;
+  height: 300px;
+  width: 200px;
+  margin-left: -85px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: -5px 5px 7px rgba(0,0,0,0.2),5px 5px 10px rgba(0,0,0,0.2) ;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 10px;
+  font-weight: 500;
+  color: black;
+  display: none;
+}
+.triangle-up{
+  position: relative;
+  height: 0;
+  width: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 20px solid white;
+  top: -12px;
+}
+.NewUser{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.NewUser a{
+  color: royalblue;
+  text-decoration: none;
+}
+.NewUser a:hover{
+  text-decoration: underline;
+}
+.loginMenu{
+  width: 200px;
+  margin-top: 25px;
+  
+}
+.menuList{
+  display: flex;
+  left: 10px;
+  padding: 10px 0px;
+}
+.menuList p{
+  padding-left: 15px;
+}
+.menuList i{
+  color: royalblue;
+}
+.loginBtn:hover .HoverLogin{
+  display: flex;
+  cursor: pointer;
+}
+  
+  
+  .img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .posterimg{
+    margin-bottom: 50px;
+  }
+  
+  .item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 20px auto;
+  }
+  
+  .items {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    border-radius: 10px;
+    /* background-color:aliceblue; */
+    width: 300px;
+    height: 450px;
+    transition: 200ms ease-in-out;
+    box-shadow: 2px 5px 5px rgb(0, 0, 0, 0.3);
+  }
+  .items:hover {
+    transform: scale(1.02);
+  }
+  .items h2 {
+    font-size: 30px;
+  }
+  
+  .items .img {
+    width: 80%;
+    height: auto;
+  }
+  
+  .price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .price p:first-child {
+    text-decoration: line-through;
+  }
+  
+  .item-text {
+    font-size: 20px;
+  }
+  
+  .container {
+    max-width: 1170px;
+  
+    margin: auto;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul {
+    list-style-type: none;
+  }
+  .footer {
+    background-color: #4daef9;
+    padding: 20px 0;
+  }
+  .footer-col {
+    width: 20%;
+    padding: 0 15px;
+  }
+  .footer-col h4 {
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #ffffff;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    color: white;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.3s ease;
+  }
+  .footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+  }
+  @media (max-width: 767px) {
+    .footer-col {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+  }
+  @media (max-width: 574px) {
+    .footer-col {
+      width: 100%;
+    }
+  }
+  @media (max-width: 375px) {
+    .form-outline input[type="text"] {
+      width: 300px;
+    }
+  }
+  @media (max-width: 500px) {
+    .form-outline input[type="text"] {
+      width: 300px;
+    }
+  }
